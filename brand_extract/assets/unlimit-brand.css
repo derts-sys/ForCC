@@ -1,0 +1,67 @@
+/* ============================================================
+   UNLIMIT BRAND TOKENS
+   Extracted from "Unlimit – Global Deck 2026" (current brand,
+   post 22.06.2025 rebrand). Reuse for projects styled as Unlimit.
+   ============================================================ */
+
+:root {
+  /* --- Core brand colours --- */
+  --unl-purple:      #6700FB;  /* primary accent / brand purple   */
+  --unl-indigo:      #756AF3;  /* secondary accent / periwinkle   */
+  --unl-lime:        #C9F73A;  /* highlight / CTA accent          */
+  --unl-lime-bright: #AFF41D;  /* alt brighter lime               */
+
+  /* --- Neutrals --- */
+  --unl-black:       #000000;
+  --unl-ink:         #1A1A1A;  /* near-black for text             */
+  --unl-grey:        #7F7F7F;  /* secondary / caption text        */
+  --unl-bg:          #F5F5F9;  /* default light page background    */
+  --unl-bg-alt:      #ECEEF5;  /* slightly cooler light panel      */
+  --unl-white:       #FFFFFF;
+
+  /* --- Signature gradient (blue → green → purple) --- */
+  --unl-gradient: linear-gradient(120deg, #756AF3 0%, #4F93F0 30%, #7BE36B 60%, #6700FB 100%);
+
+  /* --- Typography --- */
+  --unl-font-display: "Nekst", "Montserrat", system-ui, sans-serif; /* headlines */
+  --unl-font-body:    "Inter", "Helvetica Neue", Arial, sans-serif;  /* body text */
+}
+
+/* --- Suggested usage --- */
+body {
+  background: var(--unl-bg);
+  color: var(--unl-ink);
+  font-family: var(--unl-font-body);
+  font-weight: 400;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--unl-font-display);
+  font-weight: 600;          /* Nekst SemiBold is the headline default */
+  color: var(--unl-ink);
+  letter-spacing: -0.01em;
+}
+
+.accent       { color: var(--unl-purple); }
+.accent-lime  { color: var(--unl-lime); }
+
+.btn-primary {
+  background: var(--unl-purple);
+  color: var(--unl-white);
+  border: none;
+  border-radius: 999px;       /* pill buttons, as in deck */
+  padding: 0.75rem 1.5rem;
+  font-family: var(--unl-font-body);
+  font-weight: 600;
+}
+
+.btn-accent {
+  background: var(--unl-lime);
+  color: var(--unl-ink);
+  border-radius: 999px;
+}
+
+.hero {
+  background: var(--unl-gradient);
+  color: var(--unl-white);
+}

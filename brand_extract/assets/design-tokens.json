@@ -10,7 +10,9 @@
       "purple":      { "value": "#6700FB", "desc": "Primary brand accent" },
       "indigo":      { "value": "#756AF3", "desc": "Secondary accent / gradient start" },
       "lime":        { "value": "#C9F73A", "desc": "Highlight / CTA accent" },
-      "lime-bright": { "value": "#AFF41D", "desc": "Alt brighter lime" }
+      "lime-bright": { "value": "#AFF41D", "desc": "Alt brighter lime" },
+      "teal":        { "value": "#24D8CC", "desc": "Energy/flow accent (social, ribbons, dark expressions)" },
+      "mint":        { "value": "#9CF0D8", "desc": "Light teal tint" }
     },
     "neutral": {
       "black":  { "value": "#000000" },
@@ -33,7 +35,19 @@
     },
     "gradient": {
       "signature": "linear-gradient(120deg, #756AF3 0%, #4F93F0 30%, #7BE36B 60%, #6700FB 100%)",
-      "subtle":    "linear-gradient(120deg, #F5F5F9 0%, #ECEEF5 100%)"
+      "subtle":    "linear-gradient(120deg, #F5F5F9 0%, #ECEEF5 100%)",
+      "energy":    "linear-gradient(120deg, #02201F 0%, #24D8CC 60%, #C9F73A 100%)"
+    },
+    "dark": {
+      "desc": "Dark theme – used across video-call backgrounds, social and high-impact surfaces",
+      "bg":      { "value": "#1A1A1A", "desc": "Page background" },
+      "bg-2":    { "value": "#02201F", "desc": "Dark teal panel" },
+      "surface": { "value": "#26262A", "desc": "Cards / raised surfaces" },
+      "line":    { "value": "#3A3A40", "desc": "Borders on dark" },
+      "text":    { "value": "#FFFFFF", "desc": "Primary text on dark" },
+      "text-2":  { "value": "#A8A8B0", "desc": "Secondary text on dark" },
+      "accent":  { "value": "#C9F73A", "desc": "Primary pop on dark = lime" },
+      "accent-2":{ "value": "#24D8CC", "desc": "Secondary pop on dark = teal" }
     }
   },
   "font": {

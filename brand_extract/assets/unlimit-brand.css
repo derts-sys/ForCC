@@ -11,6 +11,8 @@
   --unl-indigo:      #756AF3;  /* secondary accent / gradient start        */
   --unl-lime:        #C9F73A;  /* highlight / CTA accent / quote marks     */
   --unl-lime-bright: #AFF41D;
+  --unl-teal:        #24D8CC;  /* energy/flow accent (social, dark, ribbons)*/
+  --unl-mint:        #9CF0D8;  /* light teal tint                          */
 
   /* --- Neutrals --- */
   --unl-black:  #000000;
@@ -30,6 +32,7 @@
   /* --- Gradients --- */
   --unl-gradient:        linear-gradient(120deg, #756AF3 0%, #4F93F0 30%, #7BE36B 60%, #6700FB 100%);
   --unl-gradient-subtle: linear-gradient(120deg, #F5F5F9 0%, #ECEEF5 100%);
+  --unl-gradient-energy: linear-gradient(120deg, #02201F 0%, #24D8CC 60%, #C9F73A 100%);
 
   /* --- Typography --- */
   --unl-font-display: "Nekst", "Montserrat", system-ui, sans-serif;
@@ -109,3 +112,35 @@ tr:hover td { background: var(--unl-bg); }
   --unl-chart-4: #3CB37A; --unl-chart-5: #4F93F0; --unl-chart-6: #F5A623;
   --unl-chart-7: #9B5DE5; --unl-chart-8: #1A1A1A;
 }
+
+/* ============================================================
+   DARK THEME
+   Used across video-call backgrounds, social and high-impact
+   surfaces. Apply via <html data-theme="dark"> or .unl-dark.
+   On dark, lime is the primary pop and teal the secondary.
+   ============================================================ */
+[data-theme="dark"], .unl-dark {
+  --unl-bg:     #1A1A1A;   /* page background          */
+  --unl-bg-alt: #02201F;   /* dark teal panel          */
+  --unl-ink:    #FFFFFF;   /* primary text             */
+  --unl-grey:   #A8A8B0;   /* secondary text           */
+  --unl-line:   #3A3A40;   /* borders                  */
+  --unl-white:  #26262A;   /* "surface" token on dark  */
+}
+[data-theme="dark"] body, .unl-dark {
+  background: var(--unl-bg); color: var(--unl-ink);
+}
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+.unl-dark h1, .unl-dark h2, .unl-dark h3 { color: #FFFFFF; }
+[data-theme="dark"] .card, .unl-dark .card {
+  background: #26262A; border-color: #3A3A40; box-shadow: none;
+}
+/* On dark, prefer lime / teal CTAs (purple loses contrast) */
+[data-theme="dark"] .btn-primary, .unl-dark .btn-primary {
+  background: var(--unl-lime); color: var(--unl-ink);
+}
+[data-theme="dark"] .btn-accent, .unl-dark .btn-accent {
+  background: var(--unl-teal); color: var(--unl-ink);
+}
+.hero-energy { background: var(--unl-gradient-energy); color: #fff;
+               border-radius: var(--unl-r-lg); padding: var(--unl-s-2xl); }

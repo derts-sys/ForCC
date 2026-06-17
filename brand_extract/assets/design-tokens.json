@@ -1,0 +1,64 @@
+{
+  "$meta": {
+    "brand": "Unlimit",
+    "source": "Unlimit – Global Deck 2026 (extracted) + unlimit.com brand language",
+    "note": "Current brand, post 22.06.2025 rebrand. Slogan: 'borderless payments'. Mission: eliminate financial borders.",
+    "updated": "2026-06-17"
+  },
+  "color": {
+    "brand": {
+      "purple":      { "value": "#6700FB", "desc": "Primary brand accent" },
+      "indigo":      { "value": "#756AF3", "desc": "Secondary accent / gradient start" },
+      "lime":        { "value": "#C9F73A", "desc": "Highlight / CTA accent" },
+      "lime-bright": { "value": "#AFF41D", "desc": "Alt brighter lime" }
+    },
+    "neutral": {
+      "black":  { "value": "#000000" },
+      "ink":    { "value": "#1A1A1A", "desc": "Default text" },
+      "grey":   { "value": "#7F7F7F", "desc": "Secondary text / captions" },
+      "line":   { "value": "#E3E3EC", "desc": "Borders / dividers (derived)" },
+      "bg":     { "value": "#F5F5F9", "desc": "Default light background" },
+      "bg-alt": { "value": "#ECEEF5", "desc": "Cool light panel" },
+      "white":  { "value": "#FFFFFF" }
+    },
+    "semantic": {
+      "success": { "value": "#3CB37A", "desc": "Derived – sits with lime/green family" },
+      "warning": { "value": "#F5A623", "desc": "Derived" },
+      "error":   { "value": "#E5484D", "desc": "Derived" },
+      "info":    { "value": "#756AF3", "desc": "Reuses indigo" }
+    },
+    "chart": {
+      "desc": "Ordered categorical palette for dashboards/reports",
+      "values": ["#6700FB", "#C9F73A", "#756AF3", "#3CB37A", "#4F93F0", "#F5A623", "#9B5DE5", "#1A1A1A"]
+    },
+    "gradient": {
+      "signature": "linear-gradient(120deg, #756AF3 0%, #4F93F0 30%, #7BE36B 60%, #6700FB 100%)",
+      "subtle":    "linear-gradient(120deg, #F5F5F9 0%, #ECEEF5 100%)"
+    }
+  },
+  "font": {
+    "family": {
+      "display": "Nekst, Montserrat, system-ui, sans-serif",
+      "body":    "Inter, 'Helvetica Neue', Arial, sans-serif",
+      "mono":    "'JetBrains Mono', ui-monospace, monospace"
+    },
+    "weight": { "light": 300, "regular": 400, "medium": 500, "semibold": 600, "bold": 700 },
+    "scale": {
+      "display": { "size": "48px", "line": "1.05", "weight": 600, "tracking": "-0.02em" },
+      "h1":      { "size": "36px", "line": "1.1",  "weight": 600, "tracking": "-0.01em" },
+      "h2":      { "size": "28px", "line": "1.15", "weight": 600 },
+      "h3":      { "size": "22px", "line": "1.2",  "weight": 600 },
+      "body-lg": { "size": "18px", "line": "1.5",  "weight": 400 },
+      "body":    { "size": "16px", "line": "1.5",  "weight": 400 },
+      "small":   { "size": "14px", "line": "1.45", "weight": 400 },
+      "caption": { "size": "12px", "line": "1.4",  "weight": 400 }
+    }
+  },
+  "radius": { "sm": "8px", "md": "16px", "lg": "24px", "pill": "999px" },
+  "space":  { "xs": "4px", "sm": "8px", "md": "16px", "lg": "24px", "xl": "40px", "2xl": "64px" },
+  "shadow": {
+    "card": "0 8px 24px rgba(26,26,26,0.08)",
+    "pop":  "0 12px 40px rgba(103,0,251,0.18)"
+  },
+  "slide": { "ratio": "16:9", "px": "1920x1080", "pt": "960x540" }
+}

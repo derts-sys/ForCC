@@ -1,67 +1,111 @@
 /* ============================================================
-   UNLIMIT BRAND TOKENS
-   Extracted from "Unlimit – Global Deck 2026" (current brand,
-   post 22.06.2025 rebrand). Reuse for projects styled as Unlimit.
+   UNLIMIT BRAND STYLESHEET
+   Source: "Unlimit – Global Deck 2026" (extracted) + unlimit.com
+   Current brand (post 22.06.2025 rebrand). Slogan: "borderless payments".
+   Drop in and use the custom properties / utility classes below.
    ============================================================ */
 
 :root {
-  /* --- Core brand colours --- */
-  --unl-purple:      #6700FB;  /* primary accent / brand purple   */
-  --unl-indigo:      #756AF3;  /* secondary accent / periwinkle   */
-  --unl-lime:        #C9F73A;  /* highlight / CTA accent          */
-  --unl-lime-bright: #AFF41D;  /* alt brighter lime               */
+  /* --- Brand colours --- */
+  --unl-purple:      #6700FB;  /* primary accent / links / primary buttons */
+  --unl-indigo:      #756AF3;  /* secondary accent / gradient start        */
+  --unl-lime:        #C9F73A;  /* highlight / CTA accent / quote marks     */
+  --unl-lime-bright: #AFF41D;
 
   /* --- Neutrals --- */
-  --unl-black:       #000000;
-  --unl-ink:         #1A1A1A;  /* near-black for text             */
-  --unl-grey:        #7F7F7F;  /* secondary / caption text        */
-  --unl-bg:          #F5F5F9;  /* default light page background    */
-  --unl-bg-alt:      #ECEEF5;  /* slightly cooler light panel      */
-  --unl-white:       #FFFFFF;
+  --unl-black:  #000000;
+  --unl-ink:    #1A1A1A;   /* body text          */
+  --unl-grey:   #7F7F7F;   /* secondary text     */
+  --unl-line:   #E3E3EC;   /* borders / dividers */
+  --unl-bg:     #F5F5F9;   /* page background    */
+  --unl-bg-alt: #ECEEF5;   /* cool panel         */
+  --unl-white:  #FFFFFF;
 
-  /* --- Signature gradient (blue → green → purple) --- */
-  --unl-gradient: linear-gradient(120deg, #756AF3 0%, #4F93F0 30%, #7BE36B 60%, #6700FB 100%);
+  /* --- Semantic (UI states) --- */
+  --unl-success: #3CB37A;
+  --unl-warning: #F5A623;
+  --unl-error:   #E5484D;
+  --unl-info:    #756AF3;
+
+  /* --- Gradients --- */
+  --unl-gradient:        linear-gradient(120deg, #756AF3 0%, #4F93F0 30%, #7BE36B 60%, #6700FB 100%);
+  --unl-gradient-subtle: linear-gradient(120deg, #F5F5F9 0%, #ECEEF5 100%);
 
   /* --- Typography --- */
-  --unl-font-display: "Nekst", "Montserrat", system-ui, sans-serif; /* headlines */
-  --unl-font-body:    "Inter", "Helvetica Neue", Arial, sans-serif;  /* body text */
+  --unl-font-display: "Nekst", "Montserrat", system-ui, sans-serif;
+  --unl-font-body:    "Inter", "Helvetica Neue", Arial, sans-serif;
+  --unl-font-mono:    "JetBrains Mono", ui-monospace, monospace;
+
+  /* --- Radius / spacing / shadow --- */
+  --unl-r-sm: 8px;  --unl-r-md: 16px;  --unl-r-lg: 24px;  --unl-r-pill: 999px;
+  --unl-s-xs: 4px;  --unl-s-sm: 8px;   --unl-s-md: 16px;  --unl-s-lg: 24px;
+  --unl-s-xl: 40px; --unl-s-2xl: 64px;
+  --unl-shadow-card: 0 8px 24px rgba(26,26,26,0.08);
+  --unl-shadow-pop:  0 12px 40px rgba(103,0,251,0.18);
 }
 
-/* --- Suggested usage --- */
+/* --- Base --- */
 body {
   background: var(--unl-bg);
   color: var(--unl-ink);
   font-family: var(--unl-font-body);
-  font-weight: 400;
+  font-size: 16px; line-height: 1.5; font-weight: 400;
 }
 
 h1, h2, h3, .display {
   font-family: var(--unl-font-display);
-  font-weight: 600;          /* Nekst SemiBold is the headline default */
+  font-weight: 600;
   color: var(--unl-ink);
   letter-spacing: -0.01em;
+  margin: 0 0 .5em;
 }
+.display { font-size: 48px; line-height: 1.05; letter-spacing: -0.02em; }
+h1 { font-size: 36px; line-height: 1.1; }
+h2 { font-size: 28px; line-height: 1.15; }
+h3 { font-size: 22px; line-height: 1.2; }
+small, .caption { font-size: 14px; color: var(--unl-grey); }
 
-.accent       { color: var(--unl-purple); }
-.accent-lime  { color: var(--unl-lime); }
+a { color: var(--unl-purple); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-.btn-primary {
-  background: var(--unl-purple);
-  color: var(--unl-white);
-  border: none;
-  border-radius: 999px;       /* pill buttons, as in deck */
-  padding: 0.75rem 1.5rem;
-  font-family: var(--unl-font-body);
-  font-weight: 600;
-}
+.accent      { color: var(--unl-purple); }
+.accent-lime { color: var(--unl-lime); }
 
-.btn-accent {
-  background: var(--unl-lime);
-  color: var(--unl-ink);
-  border-radius: 999px;
-}
+/* --- Buttons (pill, as in the deck) --- */
+.btn { font-family: var(--unl-font-body); font-weight: 600; border: none;
+       border-radius: var(--unl-r-pill); padding: 12px 24px; cursor: pointer; }
+.btn-primary { background: var(--unl-purple); color: #fff; }
+.btn-primary:hover { box-shadow: var(--unl-shadow-pop); }
+.btn-accent  { background: var(--unl-lime); color: var(--unl-ink); }
+.btn-ghost   { background: transparent; color: var(--unl-purple);
+               box-shadow: inset 0 0 0 1.5px var(--unl-purple); }
 
-.hero {
-  background: var(--unl-gradient);
-  color: var(--unl-white);
+/* --- Surfaces --- */
+.card { background: #fff; border: 1px solid var(--unl-line);
+        border-radius: var(--unl-r-lg); padding: var(--unl-s-lg);
+        box-shadow: var(--unl-shadow-card); }
+.hero { background: var(--unl-gradient); color: #fff;
+        border-radius: var(--unl-r-lg); padding: var(--unl-s-2xl); }
+
+/* --- Tables (reports) --- */
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-family: var(--unl-font-display); font-weight: 600;
+     color: var(--unl-grey); border-bottom: 2px solid var(--unl-line);
+     padding: 10px 12px; }
+td { border-bottom: 1px solid var(--unl-line); padding: 10px 12px; }
+tr:hover td { background: var(--unl-bg); }
+
+/* --- Status pills (dashboards) --- */
+.tag { display: inline-block; border-radius: var(--unl-r-pill);
+       padding: 2px 10px; font-size: 12px; font-weight: 600; }
+.tag-success { background: rgba(60,179,122,.15); color: var(--unl-success); }
+.tag-warning { background: rgba(245,166,35,.15); color: #B97400; }
+.tag-error   { background: rgba(229,72,77,.15);  color: var(--unl-error); }
+.tag-info    { background: rgba(117,106,243,.15);color: var(--unl-info); }
+
+/* --- Chart palette (use in order) --- */
+:root {
+  --unl-chart-1: #6700FB; --unl-chart-2: #C9F73A; --unl-chart-3: #756AF3;
+  --unl-chart-4: #3CB37A; --unl-chart-5: #4F93F0; --unl-chart-6: #F5A623;
+  --unl-chart-7: #9B5DE5; --unl-chart-8: #1A1A1A;
 }

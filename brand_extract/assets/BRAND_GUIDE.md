@@ -1,0 +1,127 @@
+# Unlimit — Brand & Design Guide
+
+Reusable styling reference for building **apps, dashboards, reports, presentations and files** under Unlimit branding.
+
+**Sources:** extracted from *"Unlimit – Global Deck 2026"* + public unlimit.com brand language. Reflects the current brand (post **22.06.2025** rebrand).
+
+---
+
+## 1. Brand foundation
+- **Name:** Unlimit (formerly Unlimint; rebranded May 2023, logo refreshed 22.06.2025)
+- **Mission:** *Eliminate financial borders.*
+- **Slogan:** *"borderless payments"*
+- **Campaign line (deck):** *"Making global expansion easy."*
+- **Tone of voice:** confident, clear, global, human, optimistic. Short declarative sentences. Lead with the customer outcome, not the plumbing.
+- **Products to theme around:** Payment Processing (1000+ methods / APMs), White-Label **Card Issuing**, **Unlimit BaaS**, **Unlimit Crypto** (fiat on/off-ramp).
+- **Regions:** Europe, UK, LatAm, APAC, Africa → world-map / connectivity motif.
+- **Ambassador:** Simu Liu (borderless-payments campaign).
+
+---
+
+## 2. Logo
+| Asset | File | Use |
+|---|---|---|
+| Wordmark (white) | `unlimit_wordmark_white.png` | On gradient/dark/photo backgrounds |
+| Monogram "un" (white) | `unlimit_monogram_un.png` | Favicons, app icons, small spaces, slide corners |
+| Wordmark (black) | `2025_unlimit-logo_black.png` *(in Drive)* | On light backgrounds |
+
+**Rules:** keep clear space ≥ the height of the "u" around the mark; never stretch, recolour outside brand colours, add shadows, or place the white logo on a busy light area without a scrim. Prefer the black wordmark on `#F5F5F9`/white; white wordmark on the gradient.
+> No vector (SVG/EPS) was embedded in the deck — request the official vector set from Marketing for print/large formats.
+
+---
+
+## 3. Colour
+### Brand
+| Role | Hex | Notes |
+|---|---|---|
+| Brand purple | `#6700FB` | Primary accent, links, primary buttons |
+| Indigo | `#756AF3` | Secondary accent, gradient start |
+| Lime | `#C9F73A` | Highlights, CTAs, quote marks |
+| Lime bright | `#AFF41D` | Alt lime |
+
+### Neutrals
+| Role | Hex |
+|---|---|
+| Ink (text) | `#1A1A1A` |
+| Black | `#000000` |
+| Grey (secondary) | `#7F7F7F` |
+| Line / divider | `#E3E3EC` |
+| Background | `#F5F5F9` |
+| Cool panel | `#ECEEF5` |
+| White | `#FFFFFF` |
+
+### Semantic (UI states — derived to fit the palette)
+`success #3CB37A` · `warning #F5A623` · `error #E5484D` · `info #756AF3`
+
+### Signature gradient
+`linear-gradient(120deg, #756AF3, #4F93F0, #7BE36B, #6700FB)` — blue → green → purple.
+
+### Accessibility
+- Purple `#6700FB` on white ≈ 7:1 → safe for text and UI.
+- **Lime `#C9F73A` is for accents/fills only — never lime text on white** (fails contrast). Put ink text on lime.
+- Body text: ink `#1A1A1A` on `#F5F5F9`/white.
+
+---
+
+## 4. Typography
+- **Display / headings:** **Nekst** (SemiBold default; Bold/Medium/Light/Regular).
+- **Body / UI:** **Inter** (Light/Regular/SemiBold/Bold).
+- **Fallbacks:** Montserrat → system-ui → Arial.
+- Headings use tight tracking (−0.01 to −0.02em). Inter is free (Google Fonts); **Nekst is commercial — confirm licence before shipping.**
+
+| Style | Size / line | Weight |
+|---|---|---|
+| Display | 48 / 1.05 | 600 |
+| H1 | 36 / 1.1 | 600 |
+| H2 | 28 / 1.15 | 600 |
+| H3 | 22 / 1.2 | 600 |
+| Body L | 18 / 1.5 | 400 |
+| Body | 16 / 1.5 | 400 |
+| Small | 14 / 1.45 | 400 |
+| Caption | 12 / 1.4 | 400 |
+
+---
+
+## 5. Imagery & shape language
+- **Gradients** (blue/green/purple) and **glassy 3D shapes** (discs, orbs, translucent glass) — see `bg_cover_gradient.png`, `bg_green_orb.png`.
+- **Rounded** everything: pill buttons (`999px`), cards `16–24px`.
+- World-map / region motif for global/coverage stories.
+- Photography: real people, bright, optimistic; pair with lime quote marks.
+- Generous whitespace on light `#F5F5F9`.
+
+---
+
+## 6. Application recipes
+
+### App / product UI
+- Background `#F5F5F9`; cards white, radius 16px, shadow `0 8px 24px rgba(26,26,26,.08)`.
+- Primary action = purple pill; secondary = ghost (purple outline); accent/CTA = lime.
+- Nav/active state: purple; icons line-style, rounded.
+
+### Dashboard
+- Use the **chart palette in order:** `#6700FB → #C9F73A → #756AF3 → #3CB37A → #4F93F0 → #F5A623 → #9B5DE5 → #1A1A1A`.
+- KPI numbers in Nekst SemiBold; status as tinted pills (`.tag-*`).
+- One gradient hero/banner max per screen — keep data areas neutral for legibility.
+
+### Report / document / file
+- Cover: gradient or `bg_green_orb.png` + white wordmark + Nekst title.
+- Body on white, ink text, grey captions; tables with grey Nekst headers + `#E3E3EC` rules.
+- Footer: monogram + page number in grey. Accent figures/callouts in purple.
+
+### Presentation
+- 16:9, 1920×1080. Dark/gradient title slide; light content slides (`#F5F5F9`).
+- One idea per slide, big Nekst headline, lime to highlight one keyword.
+- Use the included PPTX template (`Unlimit_Brand_Template.pptx`) as a starting master.
+
+---
+
+## 7. Files in this kit
+| File | What |
+|---|---|
+| `design-tokens.json` | All tokens (colour/type/radius/space/shadow/chart) for code |
+| `unlimit-brand.css` | CSS variables + components (buttons, cards, tables, tags, chart vars) |
+| `BRAND_GUIDE.md` | This guide |
+| `unlimit_wordmark_white.png`, `unlimit_monogram_un.png` | Logos |
+| `bg_cover_gradient.png`, `bg_green_orb.png` | Backgrounds |
+| `Unlimit_Brand_Book.pdf` | Visual brand book |
+| `Unlimit_Brand_Template.pptx` | Editable presentation template |

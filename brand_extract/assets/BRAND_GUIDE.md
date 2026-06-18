@@ -24,6 +24,10 @@ Reusable styling reference for building **apps, dashboards, reports, presentatio
 | Wordmark (white) | `unlimit_wordmark_white.png` | On gradient/dark/photo backgrounds |
 | Monogram "un" (white) | `unlimit_monogram_un.png` | Favicons, app icons, small spaces, slide corners |
 | Wordmark (black) | `2025_unlimit-logo_black.png` *(in Drive)* | On light backgrounds |
+| **Wordmark (vector)** | `unlimit_wordmark.svg` (+ `_black`/`_white`) | Scalable; `.svg` uses `currentColor` to inherit theme |
+| **Monogram (vector)** | `unlimit_monogram.svg` (+ `_black`/`_white`) | Scalable monogram |
+
+> The `.svg` files are **auto-traced from the PNGs** (clean for the wordmark; the monogram is from a 157 px source so edges are approximate). Good for web/UI at any size; for production print, still get the official vector from Marketing.
 
 **Lockup with descriptor.** The official lockup pairs the wordmark with the
 descriptor **"borderless payments"** set in two lines (Inter, smaller, same
@@ -163,5 +167,7 @@ Apply via `<html data-theme="dark">` or `.unl-dark` in `unlimit-brand.css`.
 | `backgrounds/video-call/{light,dark}/…` | Official video-call backgrounds (1920×1080) |
 | `social/linkedin_cover_*.png` | Official LinkedIn cover (1584×396) |
 | `Unlimit_LinkedIn_Banner_Template.png` | Editable social banner template (1584×396) |
+| `unlimit_wordmark.svg`, `unlimit_monogram.svg` (+ `_black`/`_white`) | Scalable vector logos |
+| `brand-styleguide.html` | Interactive single-file living style guide (light/dark, click-to-copy) |
 | `Unlimit_Brand_Book.pdf` | Visual brand book (incl. dark-theme page) |
 | `Unlimit_Brand_Template.pptx` | Editable presentation template |

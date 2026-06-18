@@ -14,14 +14,18 @@ Reflects the current brand (post 22.06.2025 rebrand). **Full spec → [`BRAND_GU
 ```
 assets/
 ├─ BRAND_GUIDE.md                      Full brand & design guide
+├─ brand-styleguide.html               Interactive living style guide (light/dark, copy hex)
 ├─ design-tokens.json                  All tokens (colour/type/dark/chart…)
 ├─ unlimit-brand.css                   CSS variables + components + dark theme
 ├─ Unlimit_Brand_Book.pdf             Visual brand book (8 pp, incl. dark page)
 ├─ Unlimit_Brand_Template.pptx        Editable presentation template
 ├─ Unlimit_LinkedIn_Banner_Template.png   Social banner template (1584×396)
+├─ unlimit_wordmark.svg / _black / _white     Wordmark, vector (currentColor + fills)
+├─ unlimit_monogram.svg / _black / _white     Monogram, vector
 ├─ unlimit_wordmark_white.png             Wordmark (white)
 ├─ unlimit_wordmark_white_transparent.png Wordmark (white, true alpha)
 ├─ unlimit_monogram_un.png                "un" monogram
+├─ unlimit_monogram_un_transparent.png    "un" monogram (true alpha)
 ├─ bg_cover_gradient.png, bg_green_orb.png   Gradient backgrounds
 ├─ backgrounds/video-call/
 │   ├─ light/  meet_bg_001–003_light.jpg     Official, 1920×1080
